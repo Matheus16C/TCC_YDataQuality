@@ -5,7 +5,7 @@ from ydata_quality.bias_fairness import BiasFairness
 def main():
     # Carregando base de dados
 
-    df = pd.read_csv('census_10k.csv')
+    df = pd.read_csv('census_income_50k.csv')
     df.head()
 
     # Criação da engine
