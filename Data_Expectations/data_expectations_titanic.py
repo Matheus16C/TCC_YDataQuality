@@ -1,18 +1,16 @@
 import pandas as pd
-
+from ydata_quality import DataQuality
 from ydata_quality.data_expectations import DataExpectationsReporter
 
-df = pd.read_csv('../../datasets/taxi_yellow_tripdata_sample_2019-01.csv')
-results_json_path = '../../datasets/taxi_long.json'
+df = pd.read_csv('Titanic.csv')
+results_json_path = 'titanic_results.json'
 
-der = DataExpectationsReporter()
+dq = DataExpectationsReporter()
 
-results = der.evaluate(results_json_path, df)
+results = dq.evaluate(results_json_path, df)
 
-print(results)
-
-warnings = der.get_warnings()
-print(warnings[0])
+warnings = dq.get_warnings()
+print(warnings)
 
 print(list(results.keys()))
 
@@ -26,4 +24,3 @@ expectations_report, expectations_dense = results['Expectation Level Assessment'
 print(expectations_report)
 
 print(expectations_dense[0])
-
