@@ -1,7 +1,8 @@
 import pandas as pd
 from ydata_quality.duplicates import DuplicateChecker
 
-df = pd.read_csv('olist_geolocation_dataset.csv')
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Titanic/titanic.csv')
 
 dc = DuplicateChecker(df=df)
 

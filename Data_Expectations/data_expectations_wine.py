@@ -3,8 +3,8 @@ from ydata_quality import DataQuality
 from ydata_quality.data_expectations import DataExpectationsReporter
 
 df = pd.read_csv(
-    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Titanic/titanic.csv')
-results_json_path = 'titanic_results.json'
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/wine/winequality-red.csv')
+results_json_path = 'wine_results.json'
 
 dq = DataExpectationsReporter()
 

@@ -5,13 +5,13 @@ from ydata_quality.bias_fairness import BiasFairness
 def main():
     # Carregando base de dados
 
-    df = pd.read_csv("Loan.csv")
-    print(df.head())
+    df = pd.read_csv(
+        "C:/Users/ist.mevangelista/Documents/tcc/Datasets/wine/winequality-red.csv")
 
     # Criação da engine
 
     bf = BiasFairness(df=df, sensitive_features=[
-                      'age', 'education'], label='loan_status', random_state=42)
+                      'fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol'], label='quality', random_state=42)
 
     # Avaliação completa
 

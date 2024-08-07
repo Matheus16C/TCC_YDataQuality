@@ -2,8 +2,9 @@ import pandas as pd
 from ydata_quality import DataQuality
 from ydata_quality.data_expectations import DataExpectationsReporter
 
-df = pd.read_csv('diabetes.csv')
-results_json_path = 'diabetes_results.json'
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Census/Census_50k.csv')
+results_json_path = 'census_results.json'
 
 dq = DataExpectationsReporter()
 

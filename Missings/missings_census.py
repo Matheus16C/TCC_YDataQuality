@@ -2,7 +2,8 @@ from ydata_quality.missings import MissingsProfiler
 from ydata_quality.core import QualityWarning
 import pandas as pd
 
-df = pd.read_csv('housing.csv', engine='python')
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Census/Census_50k.csv', engine='python')
 
 mp = MissingsProfiler(df=df)
 

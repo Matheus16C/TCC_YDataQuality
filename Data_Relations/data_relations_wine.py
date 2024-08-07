@@ -2,7 +2,8 @@ from ydata_quality.data_relations import DataRelationsDetector
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('auto-mpg.csv')
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/wine/winequality-red.csv')
 
 drd = DataRelationsDetector()
 

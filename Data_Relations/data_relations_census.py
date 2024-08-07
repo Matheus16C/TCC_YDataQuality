@@ -1,17 +1,14 @@
 from ydata_quality.data_relations import DataRelationsDetector
 import pandas as pd
 import numpy as np
-from sklearn.datasets import load_boston
 
-boston = load_boston()
-
-print(boston.feature_names),
-df = pd.DataFrame(boston.data, columns=boston.feature_names)
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Census/Census_50k.csv')
 
 drd = DataRelationsDetector()
 
 
-results = drd.evaluate(df)
+results = drd.evaluate(df, None, None)
 
 warnings = drd.get_warnings()
 

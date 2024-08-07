@@ -6,12 +6,13 @@ def main():
     # Carregando base de dados
 
     df = pd.read_csv(
-        'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Census/Census_50k.csv')
+        'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Titanic/titanic.csv')
+    print(df.head())
 
     # Criação da engine
 
     bf = BiasFairness(df=df, sensitive_features=[
-                      'race', 'sex'], label='income', random_state=42)
+                      "Sex", "Pclass", "Embarked"], label='Survived', random_state=42)
 
     # Avaliação completa
 

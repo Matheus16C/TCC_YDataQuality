@@ -1,16 +1,17 @@
 import pandas as pd
 from ydata_quality.labelling import LabelInspector
 
-df = pd.read_csv('bezdekIris.data')
+df = pd.read_csv(
+    'C:/Users/ist.mevangelista/Documents/tcc/Datasets/Titanic/titanic.csv')
 print(df.head())
 
-li = LabelInspector(df=df, label="class")
+li = LabelInspector(df=df, label='Cabin')
 
 results = li.evaluate()
 print(results)
 
-# warnings = li.get_warnings()
-# print(warnings)
+warnings = li.get_warnings()
+print(warnings)
 
 # print(li.missing_labels())
 

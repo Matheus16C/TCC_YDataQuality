@@ -7,7 +7,25 @@
       "kwargs": {
         "column": "Age",
         "max_value": 80,
-        "min_value": 20
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "Survived",
+        "max_value": 1,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "Pclass",
+        "max_value": 3,
+        "min_value": 1
       },
       "meta": {}
     },
@@ -101,6 +119,6 @@
   ],
   "ge_cloud_id": null,
   "meta": {
-    "great_expectations_version": "0.18.10"
+    "great_expectations_version": "0.18.18"
   }
 }
